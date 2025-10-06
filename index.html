@@ -203,6 +203,7 @@
       setTimeout(() => speechSynthesis.speak(utterance), 400);
     }
 
+    // Hero Section
     const heroText = "Hello, I Am Muhammad Faiz Dzulfigar";
     const heroElement = document.getElementById("typing-text");
     let heroIndex = 0;
@@ -217,6 +218,7 @@
     }
     window.onload = typeHero;
 
+    // Fade In Elements
     const fadeElements = document.querySelectorAll(".fade-in");
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -225,8 +227,10 @@
     }, { threshold: 0.2 });
     fadeElements.forEach(el => observer.observe(el));
 
+    // About Section (Judul tetap "About Me", Deskripsi bahasa Indonesia)
     const aboutText = "About Me";
-    const aboutDescText = "I’m a creative developer and designer passionate about blending art and technology to build futuristic experiences.";
+    const aboutDescText = "Saya seorang pengembang dan desainer kreatif yang tertarik menggabungkan seni dan teknologi untuk menciptakan pengalaman futuristik.";
+
     const aboutTitle = document.getElementById("typing-about");
     const aboutDesc = document.getElementById("about-desc");
     let aboutIndex = 0, descIndex = 0;
@@ -251,6 +255,7 @@
         setTimeout(typeAboutDesc, 500);
       }
     }
+
     function typeAboutDesc() {
       if (descIndex < aboutDescText.length) {
         aboutDesc.textContent += aboutDescText.charAt(descIndex);
